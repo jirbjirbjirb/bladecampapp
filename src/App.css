@@ -36,3 +36,89 @@
     transform: rotate(360deg);
   }
 }
+
+
+/* HOME SHELL */
+.app-container{
+  max-width: 1400px;
+  background-color: gray;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.app-container, .main-content{
+  display: flex;
+}
+
+.main-content{
+  padding: 2rem;
+  background-color: green;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.menu-bar{
+  background-color: blue;
+  width: 25%;
+  height: 100vh;
+}
+
+.section-bumper{
+  display: flex;
+  margin: 0 auto;
+
+  width: 100%;
+}
+
+.map{
+  background-color: gray;
+  height: 65%
+}
+.text-log{
+  background-color: brown;
+  height: 35%;
+}
+
+.menu-wrapper{
+  display: flex;
+  flex-direction: column;
+}
+
+/* TEXT LOG */
+.text-log-wrapper{
+  display: flex;
+  height: 100%;
+  padding: 2rem;
+}
+.district-name, .text-content{
+  color: white;
+  margin: 0 auto;
+  width: 100%;
+}
+.district-name{
+  font-size: larger;
+  height: 10%;
+}
+.district-wrapper{
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+  margin: 1rem;
+}
+
+.text-content{
+  font-size: large;
+  height: auto;
+}
+
+.claims{
+  height: auto;
+  overflow-x: scroll;
+  margin: 1rem;
+  width: auto;
+}
+.claim-wrapper{
+  color: white;  
+}
+
