@@ -83,6 +83,11 @@
 .menu-wrapper{
   display: flex;
   flex-direction: column;
+  padding: 1rem;
+}
+button{
+  cursor: pointer;
+  padding: 1rem;
 }
 
 /* TEXT LOG */

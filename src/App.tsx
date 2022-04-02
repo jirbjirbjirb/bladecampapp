@@ -1,104 +1,13 @@
 import { useState } from 'react'
 import './App.css'
+import { DistrictInfo, DistrictInfos } from './components/DistrictInfo'
 import {
-  DistrictInfo,
-  DistrictInfoProps,
-  DistrictInfos,
-} from './components/DistrictInfo'
+  dummyDistrictInfo,
+  dummyDistrictInfo1,
+  dummyDistrictInfo2,
+  dummyDistrictInfo3,
+} from './DistrictData'
 
-const dummyDistrictInfo: DistrictInfoProps = {
-  districtName: 'HELLODISTRICT0',
-  textContent:
-    'text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text ',
-  claims: [
-    {
-      name: 'firstClaim',
-      textContent: 'text text text text text text text text text',
-    },
-    {
-      name: 'secondClaim',
-      textContent: 'text text text text text text text text text',
-    },
-    {
-      name: 'thirdClaim',
-      textContent: 'text text text text text text text text text',
-    },
-    {
-      name: 'fourthClaim',
-      textContent: 'text text text text text text text text text',
-    },
-  ],
-}
-
-const dummyDistrictInfo2: DistrictInfoProps = {
-  districtName: 'HELLODISTRICT2',
-  textContent:
-    'text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text ',
-  claims: [
-    {
-      name: 'firstClaim',
-      textContent: 'text text text text text text text text text',
-    },
-    {
-      name: 'secondClaim',
-      textContent: 'text text text text text text text text text',
-    },
-    {
-      name: 'thirdClaim',
-      textContent: 'text text text text text text text text text',
-    },
-    {
-      name: 'fourthClaim',
-      textContent: 'text text text text text text text text text',
-    },
-  ],
-}
-const dummyDistrictInfo3: DistrictInfoProps = {
-  districtName: 'HELLODISTRICT3',
-  textContent:
-    'text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text ',
-  claims: [
-    {
-      name: 'firstClaim',
-      textContent: 'text text text text text text text text text',
-    },
-    {
-      name: 'secondClaim',
-      textContent: 'text text text text text text text text text',
-    },
-    {
-      name: 'thirdClaim',
-      textContent: 'text text text text text text text text text',
-    },
-    {
-      name: 'fourthClaim',
-      textContent: 'text text text text text text text text text',
-    },
-  ],
-}
-const dummyDistrictInfo1: DistrictInfoProps = {
-  districtName: 'HELLODISTRICT1',
-  textContent:
-    'text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text ',
-  claims: [
-    {
-      name: 'firstClaim',
-      textContent: 'text text text text text text text text text',
-    },
-    {
-      name: 'secondClaim',
-      textContent: 'text text text text text text text text text',
-    },
-    {
-      name: 'thirdClaim',
-      textContent: 'text text text text text text text text text',
-    },
-    {
-      name: 'fourthClaim',
-      textContent: 'text text text text text text text text text',
-    },
-  ],
-}
 const dummyInfoPackage: DistrictInfos = [
   dummyDistrictInfo1,
   dummyDistrictInfo2,
@@ -124,11 +33,8 @@ function App() {
     <div className="App">
       <div className="app-container">
         <div className="menu-bar">
-          {/* 
-            take the array of all districts and loop, displaying their names,
-            onclick set active state to matching district, triggering change in disctrictinfo component
-          */}
           <div className="menu-wrapper">
+            <h1> DISTRICTS: </h1>
             {dummyInfoPackage.map((district, i) => {
               return (
                 <button
