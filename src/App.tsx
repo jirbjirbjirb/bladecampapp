@@ -28,7 +28,6 @@ function App() {
     dummyInfoPackage,
   })
 
-  // ac
   return (
     <div className="App">
       <div className="app-container">

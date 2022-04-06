@@ -104,6 +104,7 @@ button{
 .district-name{
   font-size: larger;
   height: 10%;
+  text-align: left;
 }
 .district-wrapper{
   display: flex;
@@ -125,5 +126,18 @@ button{
 }
 .claim-wrapper{
   color: white;  
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 2px 2px 2px;
+}
+.claim-name{
+  display: flex;
+  justify-content: space-between;
+}
+.control-text{
+  text-align: left;
+}
+p{
+  line-height: 1;
 }
 

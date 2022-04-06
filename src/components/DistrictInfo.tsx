@@ -13,8 +13,15 @@ export function DistrictInfo({
         {claims?.map((claim, i) => {
           return (
             <div className="claim-wrapper" key={i}>
-              <h3>{claim.name}</h3>
-              <p>{claim.textContent}</p>
+              <div className="claim-name">
+                <h3>{claim.name}</h3> <p>hold: III</p>
+              </div>
+              <div className="control-text">
+                controlled by: 
+              </div>
+              <div>
+                <p>{claim.textContent}</p>
+              </div>
             </div>
           )
         })}
