@@ -42,7 +42,7 @@ export const crosswaterInfo: DistrictInfoProps = {
     {
       name: "Murdo's Ferry",
       textContent:
-        'The grubby Burt Murdo stands atop his craft, avarice keen in his eye. The whiskey in his blood maintains a careful balance with the sway of the river',
+        "The grubby Burt Murdo stands atop his craft, avarice keen in his eye. The whiskey in his blood maintains a careful balance with the sway of the river. He sees himself as an arbiter of the river's will, and is not keen to reliquish that power.",
       heldBy: 'Red Hand',
       hold: 2,
     },
@@ -110,7 +110,7 @@ export const silversGulchInfo: DistrictInfoProps = {
 }
 
 export const testDistrict: DistrictInfoProps = {
-  districtName: "testDisctrict",
+  districtName: "testDistrict",
   textContent:
     "test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test",
   claims: [
@@ -156,7 +156,7 @@ export const testDistrict: DistrictInfoProps = {
   map: './map_silversgulch.png'
 }
 export const testDistrict1: DistrictInfoProps = {
-  districtName: "testDisctrict1",
+  districtName: "testDistrict1",
   textContent:
     "test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test",
   claims: [
@@ -202,7 +202,7 @@ export const testDistrict1: DistrictInfoProps = {
   map: './map_silversgulch.png'
 }
 export const testDistrict2: DistrictInfoProps = {
-  districtName: "testDisctrict2",
+  districtName: "testDistrict2",
   textContent:
     "test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test",
   claims: [
@@ -248,7 +248,7 @@ export const testDistrict2: DistrictInfoProps = {
   map: './map_silversgulch.png'
 }
 export const testDistrict3: DistrictInfoProps = {
-  districtName: "testDisctrict3",
+  districtName: "testDistrict3",
   textContent:
     "test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test",
   claims: [
