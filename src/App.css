@@ -1,5 +1,9 @@
 .App {
-  text-align: center;
+
+}
+
+body{
+  background-color: #968684;
 }
 
 .App-logo {
@@ -14,14 +18,13 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
 }
 
 .App-link {
@@ -41,10 +44,11 @@
 /* HOME SHELL */
 .app-container{
   max-width: 1400px;
-  background-color: gray;
   justify-content: center;
   margin: 0 auto;
+ 
 }
+
 
 .app-container, .main-content{
   display: flex;
@@ -52,83 +56,102 @@
 
 .main-content{
   padding: 2rem;
-  background-color: green;
+  padding-top: 4rem;
   width: 75%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+.scroll-wrap{
+  padding: 1rem;
+}
 .menu-bar{
-  background-color: blue;
   width: 25%;
-  height: 100vh;
+  height: 100%;
+  margin-top: 2rem;
+  padding-left: 1rem;
 }
 
 .section-bumper{
   display: flex;
   margin: 0 auto;
-
-  width: 100%;
 }
 
 .map{
-  background-color: gray;
-  height: 65%
+  height: 50%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 .text-log{
-  background-color: brown;
-  height: 35%;
+  height: 50%;
 }
 
 .menu-wrapper{
   display: flex;
   flex-direction: column;
   padding: 1rem;
+  padding-left: 0;
 }
 button{
   cursor: pointer;
   padding: 1rem;
+  margin-bottom: 1rem;
 }
 
 /* TEXT LOG */
 .text-log-wrapper{
   display: flex;
   height: 100%;
-  padding: 2rem;
 }
 .district-name, .text-content{
-  color: white;
+  color: black;
   margin: 0 auto;
   width: 100%;
 }
 .district-name{
   font-size: larger;
-  height: 10%;
   text-align: left;
 }
 .district-wrapper{
   display: flex;
   flex-direction: column;
-  width: 65%;
+  width: 25%;
   margin: 1rem;
 }
 
+h1, h2{
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: left;
+}
+p{
+  line-height: 1;
+  text-align: left;
+}
+
 .text-content{
-  font-size: large;
+  font-size: small;
   height: auto;
+  text-align: left;
 }
 
 .claims{
   height: auto;
   overflow-x: scroll;
   margin: 1rem;
-  width: auto;
+  width: 75%;
+  box-shadow: 2px 2px 2px 2px;
+  max-height: 600px;
+  padding-left: 1rem;
 }
 .claim-wrapper{
-  color: white;  
+  color: black;  
   display: flex;
   flex-direction: column;
   box-shadow: 2px 2px 2px 2px;
+  padding: 1rem;
 }
 .claim-name{
   display: flex;
@@ -137,7 +160,55 @@ button{
 .control-text{
   text-align: left;
 }
-p{
-  line-height: 1;
+
+
+@media only screen and (max-width: 600px) {
+  .app-container,.text-log-wrapper{
+    flex-direction: column;
+    width: 100%
+  }
+  .main-content{
+    padding:0;
+    padding-top: 0;
+    width: 100%;
+  }
+  .menu-bar{
+    width: 100%;
+    height: auto;
+    margin-top: 2rem;
+    padding-left: 0;
+  }
+  .menu-bar h1{
+    margin-left: 1rem;
+  }
+  .section-bumper{
+    padding: 1rem;
+  }
+  .menu-wrapper{
+    overflow: scroll;
+    box-shadow: 2px 2px 2px 2px;
+    padding: 0;
+    margin: 1rem;
+  }
+  .district-wrapper, .claims{
+    width: 100%;
+    margin: 0;
+    padding-bottom: 1rem;
+  }
+  .map{
+    height: unset;
+    width: unset;
+    min-height: 200px;
+    min-width: 200px;
+  }
+  button{
+    margin: 1rem;
+    background-color: gray;
+  }
+  .scroll-wrap{
+    max-height: 200px;
+    padding: 0;
+  }
+  
 }
 
