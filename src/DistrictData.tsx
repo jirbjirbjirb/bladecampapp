@@ -3,7 +3,7 @@ import { DistrictInfoProps } from './components/DistrictInfo'
 export const crestHillInfo: DistrictInfoProps = {
   districtName: 'Crest Hill',
   textContent:
-    "Located at the north end of town, this is the center of all things import and export. The Titan's Gap road ends here. Stagecoaches and wagons are loaded and unloaded. Nearly anything shipping in or out of town passes through Crest Hill",
+    "Located at the north end of town, this is the center of all things import and export. The Titan's Gap road ends here. Nearly anything shipping in or out of town passes through Crest Hill",
   claims: [
     {
       name: "Hawkshaw's Livery",
