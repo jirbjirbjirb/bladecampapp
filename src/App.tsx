@@ -5,20 +5,13 @@ import {
   crosswaterInfo,
   crestHillInfo,
   silversGulchInfo,
-  testDistrict,
-  testDistrict2,
-  testDistrict1,
-  testDistrict3,
 } from './DistrictData'
 
 const infoPackage: DistrictInfos = [
   crosswaterInfo,
   crestHillInfo,
   silversGulchInfo,
-  testDistrict,
-  testDistrict1,
-  testDistrict2,
-  testDistrict3,
+
 ]
 
 function App() {

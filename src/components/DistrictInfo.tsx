@@ -1,3 +1,5 @@
+import { useEffect, useRef } from "react"
+
 export function DistrictInfo({
   districtName,
   textContent,
@@ -11,6 +13,14 @@ export function DistrictInfo({
     return holdTally
   }
 
+  const claimsRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+  if(claimsRef.current){
+    claimsRef.current.scrollTo( 0, 0 );
+  }
+  },[districtName])
+
   return (
     <div className="text-log-wrapper">
       <div className="district-wrapper">
@@ -19,7 +29,7 @@ export function DistrictInfo({
         </div>
         <div className="text-content">{textContent}</div>
       </div>
-      <div className="claims scroll-wrap">
+      <div className="claims scroll-wrap" ref={claimsRef}>
         {claims?.map((claim, i) => {
           return (
             <div className="claim-wrapper" key={i}>
