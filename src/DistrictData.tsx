@@ -201,95 +201,95 @@ export const testDistrict1: DistrictInfoProps = {
   ],
   map: './map_silversgulch.png'
 }
-export const testDistrict2: DistrictInfoProps = {
-  districtName: "testDistrict2",
-  textContent:
-    "test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test",
-  claims: [
-    {
-      name: "TestClaim",
-      textContent:
-        'test test test test test test test test',
-      heldBy: 'Unknown/Unclaimed',
-      hold: 4,
-    },
-    {
-      name: "TestClaim",
-      textContent:
-        'test test test test test test test test',
-      heldBy: 'Unknown/Unclaimed',
-      hold: 4,
-    },    {
-      name: "TestClaim",
-      textContent:
-        'test test test test test test test test',
-      heldBy: 'Unknown/Unclaimed',
-      hold: 4,
-    },    {
-      name: "TestClaim",
-      textContent:
-        'test test test test test test test test',
-      heldBy: 'Unknown/Unclaimed',
-      hold: 4,
-    },    {
-      name: "TestClaim",
-      textContent:
-        'test test test test test test test test',
-      heldBy: 'Unknown/Unclaimed',
-      hold: 4,
-    },    {
-      name: "TestClaim",
-      textContent:
-        'test test test test test test test test',
-      heldBy: 'Unknown/Unclaimed',
-      hold: 4,
-    },
-  ],
-  map: './map_silversgulch.png'
-}
-export const testDistrict3: DistrictInfoProps = {
-  districtName: "testDistrict3",
-  textContent:
-    "test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test",
-  claims: [
-    {
-      name: "TestClaim",
-      textContent:
-        'test test test test test test test test',
-      heldBy: 'Unknown/Unclaimed',
-      hold: 4,
-    },
-    {
-      name: "TestClaim",
-      textContent:
-        'test test test test test test test test',
-      heldBy: 'Unknown/Unclaimed',
-      hold: 4,
-    },    {
-      name: "TestClaim",
-      textContent:
-        'test test test test test test test test',
-      heldBy: 'Unknown/Unclaimed',
-      hold: 4,
-    },    {
-      name: "TestClaim",
-      textContent:
-        'test test test test test test test test',
-      heldBy: 'Unknown/Unclaimed',
-      hold: 4,
-    },    {
-      name: "TestClaim",
-      textContent:
-        'test test test test test test test test',
-      heldBy: 'Unknown/Unclaimed',
-      hold: 4,
-    },    {
-      name: "TestClaim",
-      textContent:
-        'test test test test test test test test',
-      heldBy: 'Unknown/Unclaimed',
-      hold: 4,
-    },
-  ],
-  map: './map_silversgulch.png'
-}
+// export const testDistrict2: DistrictInfoProps = {
+//   districtName: "testDistrict2",
+//   textContent:
+//     "test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test",
+//   claims: [
+//     {
+//       name: "TestClaim",
+//       textContent:
+//         'test test test test test test test test',
+//       heldBy: 'Unknown/Unclaimed',
+//       hold: 4,
+//     },
+//     {
+//       name: "TestClaim",
+//       textContent:
+//         'test test test test test test test test',
+//       heldBy: 'Unknown/Unclaimed',
+//       hold: 4,
+//     },    {
+//       name: "TestClaim",
+//       textContent:
+//         'test test test test test test test test',
+//       heldBy: 'Unknown/Unclaimed',
+//       hold: 4,
+//     },    {
+//       name: "TestClaim",
+//       textContent:
+//         'test test test test test test test test',
+//       heldBy: 'Unknown/Unclaimed',
+//       hold: 4,
+//     },    {
+//       name: "TestClaim",
+//       textContent:
+//         'test test test test test test test test',
+//       heldBy: 'Unknown/Unclaimed',
+//       hold: 4,
+//     },    {
+//       name: "TestClaim",
+//       textContent:
+//         'test test test test test test test test',
+//       heldBy: 'Unknown/Unclaimed',
+//       hold: 4,
+//     },
+//   ],
+//   map: './map_silversgulch.png'
+// }
+// export const testDistrict3: DistrictInfoProps = {
+//   districtName: "testDistrict3",
+//   textContent:
+//     "test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test",
+//   claims: [
+//     {
+//       name: "TestClaim",
+//       textContent:
+//         'test test test test test test test test',
+//       heldBy: 'Unknown/Unclaimed',
+//       hold: 4,
+//     },
+//     {
+//       name: "TestClaim",
+//       textContent:
+//         'test test test test test test test test',
+//       heldBy: 'Unknown/Unclaimed',
+//       hold: 4,
+//     },    {
+//       name: "TestClaim",
+//       textContent:
+//         'test test test test test test test test',
+//       heldBy: 'Unknown/Unclaimed',
+//       hold: 4,
+//     },    {
+//       name: "TestClaim",
+//       textContent:
+//         'test test test test test test test test',
+//       heldBy: 'Unknown/Unclaimed',
+//       hold: 4,
+//     },    {
+//       name: "TestClaim",
+//       textContent:
+//         'test test test test test test test test',
+//       heldBy: 'Unknown/Unclaimed',
+//       hold: 4,
+//     },    {
+//       name: "TestClaim",
+//       textContent:
+//         'test test test test test test test test',
+//       heldBy: 'Unknown/Unclaimed',
+//       hold: 4,
+//     },
+//   ],
+//   map: './map_silversgulch.png'
+// }
