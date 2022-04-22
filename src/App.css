@@ -71,7 +71,7 @@ body{
   border-style: solid;
   border-radius: 25px;
 }
-.modal-link{
+.cursor{
   cursor: pointer;
 }
 
@@ -83,6 +83,7 @@ body{
   display: flex;
   justify-content: space-between;
 }
+
 
 .faction-name{
   font-weight: 800;
@@ -217,6 +218,7 @@ p{
     box-shadow: 2px 2px 2px 2px;
     padding: 0;
     margin: 1rem;
+    width: unset;
   }
   .district-wrapper, .landmarks{
     width: 100%;
@@ -230,6 +232,9 @@ p{
     min-height: 200px;
     min-width: 200px;
   }
+  .section-bumper{
+    width: unset!important;
+  }
   button{
     margin: 1rem;
     background-color: gray;
@@ -237,7 +242,6 @@ p{
   .scroll-wrap{
     max-height: 200px;
     padding: 0;
-    width: 100%;
   }
   
 }

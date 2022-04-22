@@ -38,8 +38,8 @@ export function DistrictInfo({
   const hydrateModal = (affiliation: string) => {
     const modal = document.querySelector('.modal')
     if (modal) {
-      const factionData = allFactionInfo.find((faction) =>
-       faction.name.toLowerCase() === affiliation.toLowerCase()
+      const factionData = allFactionInfo.find(
+        (faction) => faction.name.toLowerCase() === affiliation.toLowerCase()
       )
       if (factionData) {
         setModalData(factionData)
@@ -73,8 +73,7 @@ export function DistrictInfo({
                   ref={ref}
                   onClick={() => hydrateModal(landmark.affiliation)}
                 >
-                  affiliation:{' '}
-                  <u className="modal-link">{landmark.affiliation}</u>
+                  affiliation: <u className="cursor">{landmark.affiliation}</u>
                 </div>
                 <div>
                   <p>{landmark.textContent}</p>
@@ -95,7 +94,9 @@ export function DistrictInfo({
         <div className="modal-content">
           <div className="modal-toprow">
             <div className="faction-name">{modalData?.name}</div>
-            <div onClick={() => setShowModal(false)}>x</div>
+            <div onClick={() => setShowModal(false)} className="cursor">
+              x
+            </div>
           </div>
           <div className="faction-description">{modalData?.description}</div>
           <div className="faction-other-info">
