@@ -30,7 +30,7 @@ export function DistrictInfo({
 
   const handleClickOutside = (e: any) => {
     console.log(e.target.className)
-    if (e?.target.className !== 'modal-link') {
+    if (!e?.target.className.includes('modal-link')) {
       setShowModal(false)
     }
   }
@@ -73,7 +73,7 @@ export function DistrictInfo({
                   ref={ref}
                   onClick={() => hydrateModal(landmark.affiliation)}
                 >
-                  affiliation: <u className="cursor">{landmark.affiliation}</u>
+                  affiliation: <u className="cursor modal-link">{landmark.affiliation}</u>
                 </div>
                 <div>
                   <p>{landmark.textContent}</p>
