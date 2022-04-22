@@ -22,11 +22,7 @@ export function DistrictInfo({
         <div className="text-content">{textContent}</div>
       </div>
       <div className="landmarks-wrap">
-        <div
-          style={{
-            paddingBottom: '1rem',
-          }}
-        >
+        <div className="landmark-head">
           <u>Landmarks:</u>
         </div>
         <div className="landmarks scroll-wrap" ref={landmarksRef}>

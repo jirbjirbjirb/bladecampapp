@@ -54,7 +54,6 @@ function App() {
               map={selectedDistrict.map}
             />
           </div>
-
           <div
             className="map section-bumper"
             style={{ backgroundImage: `url(${selectedDistrict.map})` }}

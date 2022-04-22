@@ -3,7 +3,7 @@ body{
 }
 
 .App{
-  height: 100vh;
+
 }
 /* HOME SHELL */
 .app-container{
@@ -44,6 +44,8 @@ body{
 .section-bumper{
   display: flex;
   margin: 0 auto;
+  width: 100%;
+  height: 100%;
 }
 
 .map{
@@ -88,7 +90,7 @@ button{
   display: flex;
   flex-direction: column;
   width: 25%;
-  margin: 1rem;
+  padding: 0rem 1rem 1rem 1rem;
 }
 
 h1, h2{
@@ -116,12 +118,19 @@ p{
   max-height: 600px;
   padding-left: 1rem;
 }
+.landmarks-wrap{
+  width: 75%;
+}
 .landmark-wrapper{
   color: black;  
   display: flex;
   flex-direction: column;
   box-shadow: 2px 2px 2px 2px;
   padding: 1rem;
+}
+.landmark-head{
+  margin-left: 1rem;
+  margin-top: 1rem;
 }
 .landmark-name{
   display: flex;
@@ -139,6 +148,13 @@ p{
   .app-container,.text-log-wrapper{
     flex-direction: column;
     width: 100%
+  }
+  .landmark-head{
+    margin-left: 0rem;
+    margin-bottom: 1rem;
+  }
+  .landmarks-wrap{
+    width: 100%;
   }
   .main-content{
     padding:0;
@@ -167,6 +183,7 @@ p{
     width: 100%;
     margin: 0;
     padding-bottom: 1rem;
+    padding-left: 0rem;
   }
   .map{
     height: unset;
@@ -181,6 +198,7 @@ p{
   .scroll-wrap{
     max-height: 200px;
     padding: 0;
+    width: 100%;
   }
   
 }
