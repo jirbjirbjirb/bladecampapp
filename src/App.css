@@ -2,15 +2,22 @@ body{
   background-color: #968684;
 }
 
-
+.App{
+  height: 100vh;
+}
 /* HOME SHELL */
 .app-container{
   max-width: 1400px;
   justify-content: center;
   margin: 0 auto;
+  height: 100%;
  
 }
 
+.landmarks-wrap{
+  display: flex;
+  flex-direction: column;
+}
 
 .app-container, .main-content{
   display: flex;
@@ -40,7 +47,7 @@ body{
 }
 
 .map{
-  height: 50%;
+  height: 100%;
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -100,7 +107,7 @@ p{
   text-align: left;
 }
 
-.claims{
+.landmarks{
   height: auto;
   overflow-x: scroll;
   margin: 1rem;
@@ -109,14 +116,14 @@ p{
   max-height: 600px;
   padding-left: 1rem;
 }
-.claim-wrapper{
+.landmark-wrapper{
   color: black;  
   display: flex;
   flex-direction: column;
   box-shadow: 2px 2px 2px 2px;
   padding: 1rem;
 }
-.claim-name{
+.landmark-name{
   display: flex;
   justify-content: space-between;
 }
@@ -126,6 +133,9 @@ p{
 
 
 @media only screen and (max-width: 600px) {
+  .App{
+    height: 100%;
+  }
   .app-container,.text-log-wrapper{
     flex-direction: column;
     width: 100%
@@ -153,7 +163,7 @@ p{
     padding: 0;
     margin: 1rem;
   }
-  .district-wrapper, .claims{
+  .district-wrapper, .landmarks{
     width: 100%;
     margin: 0;
     padding-bottom: 1rem;

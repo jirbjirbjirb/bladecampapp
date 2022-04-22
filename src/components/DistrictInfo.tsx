@@ -1,25 +1,17 @@
-import { useEffect, useRef } from "react"
+import { useEffect, useRef } from 'react'
 
 export function DistrictInfo({
   districtName,
   textContent,
-  claims,
+  landmarks,
 }: DistrictInfoProps) {
-  const getHoldTally = (hold: number) => {
-    let holdTally = ''
-    for (let i = 0; i < hold.valueOf(); i++) {
-      holdTally = holdTally + 'I'
-    }
-    return holdTally
-  }
-
-  const claimsRef = useRef<HTMLDivElement>(null)
+  const landmarksRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-  if(claimsRef.current){
-    claimsRef.current.scrollTo( 0, 0 );
-  }
-  },[districtName])
+    if (landmarksRef.current) {
+      landmarksRef.current.scrollTo(0, 0)
+    }
+  }, [districtName])
 
   return (
     <div className="text-log-wrapper">
@@ -29,20 +21,31 @@ export function DistrictInfo({
         </div>
         <div className="text-content">{textContent}</div>
       </div>
-      <div className="claims scroll-wrap" ref={claimsRef}>
-        {claims?.map((claim, i) => {
-          return (
-            <div className="claim-wrapper" key={i}>
-              <div className="claim-name">
-                <h3>{claim.name}</h3> <p>{getHoldTally(claim.hold)}</p>
+      <div className="landmarks-wrap">
+        <div
+          style={{
+            paddingBottom: '1rem',
+          }}
+        >
+          <u>Landmarks:</u>
+        </div>
+        <div className="landmarks scroll-wrap" ref={landmarksRef}>
+          {landmarks?.map((landmark, i) => {
+            return (
+              <div className="landmark-wrapper" key={i}>
+                <div className="landmark-name">
+                  <h3>{landmark.name}</h3>
+                </div>
+                <div className="control-text">
+                  affiliation: {landmark.affiliation}
+                </div>
+                <div>
+                  <p>{landmark.textContent}</p>
+                </div>
               </div>
-              <div className="control-text">held by: {claim.heldBy}</div>
-              <div>
-                <p>{claim.textContent}</p>
-              </div>
-            </div>
-          )
-        })}
+            )
+          })}
+        </div>
       </div>
     </div>
   )
@@ -51,14 +54,15 @@ export function DistrictInfo({
 export type DistrictInfoProps = {
   districtName: string
   textContent: string
-  claims?: Claims
+  landmarks?: Landmarks
   map: string
+  developmentLevel: 'developing' | 'established'
 }
 
-export type Claim = {
+export type Landmark = {
   name: string
   textContent: string
-  heldBy: Factions
+  affiliation: Factions
   hold: number
 }
 
@@ -66,9 +70,9 @@ export type Factions =
   | 'Apostles of Luton'
   | 'Split Finger Gang'
   | 'Red Hand'
-  | 'Unknown/Unclaimed'
+  | 'Unknown'
   | 'Wetherbilt Company'
 
-export type Claims = Claim[]
+export type Landmarks = Landmark[]
 
 export type DistrictInfos = DistrictInfoProps[]
