@@ -83,8 +83,8 @@ export const silversGulchInfo: DistrictInfoProps = {
     "Deep in the miner's camp, this is the absolute heart of vice in Creekside. Eliza Silver and the The Red Hand have anything a miner might need, and their establishments accept shine as payment, which saves the miner a trip across the river.",
   landmarks: [
     {
-      name: 'The Broken Spoke',
-      textContent: 'Flagship establishment of the The Red Hand',
+      name: 'The Broken Spoke Saloon',
+      textContent: "Eliza Silver's place. The Flagship establishment of the The Red Hand, the Broken Spoke is the tallest building on the street and the oldest one in town. It's bar and a brothel and, for many miners who trade shine for food, booze, and sex, it might as well be a bank.",
       affiliation: 'The Red Hand',
       hold: 4,
     },
