@@ -31,7 +31,7 @@ export const crestHillInfo: DistrictInfoProps = {
       name: 'Hotel Belle Vie',
       textContent:
         'Proprietor Samuel Gantt is an early arrival, a grotesque sycophant eager to prove his value to those even he considers his betters. Nothing said within the walls of the Belle Vie stays secret for long. Pronounced "Belly V-eye"',
-      affiliation: 'Red Hand',
+      affiliation: 'The Red Hand',
       hold: 3,
     },
   ],
@@ -48,7 +48,7 @@ export const crosswaterInfo: DistrictInfoProps = {
       name: "Murdo's Ferry",
       textContent:
         "The grubby Burt Murdo stands atop his craft, avarice keen in his eye. The whiskey in his blood maintains a careful balance with the sway of the river. He sees himself as an arbiter of the river's will, and is not keen to reliquish that power.",
-      affiliation: 'Red Hand',
+      affiliation: 'The Red Hand',
       hold: 2,
     },
     {
@@ -80,12 +80,12 @@ export const silversGulchInfo: DistrictInfoProps = {
   districtName: "Silver's Gulch",
   developmentLevel: 'established',
   textContent:
-    "Deep in the miner's camp, this is the absolute heart of vice in Creekside. Eliza Silver and the Red Hand have anything a miner might need, and their establishments accept shine as payment, which saves the miner a trip across the river.",
+    "Deep in the miner's camp, this is the absolute heart of vice in Creekside. Eliza Silver and the The Red Hand have anything a miner might need, and their establishments accept shine as payment, which saves the miner a trip across the river.",
   landmarks: [
     {
       name: 'The Broken Spoke',
-      textContent: 'Flagship establishment of the Red Hand',
-      affiliation: 'Red Hand',
+      textContent: 'Flagship establishment of the The Red Hand',
+      affiliation: 'The Red Hand',
       hold: 4,
     },
     {

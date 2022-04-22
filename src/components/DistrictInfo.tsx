@@ -122,7 +122,7 @@ export type Landmark = {
   affiliation:
     | 'Apostles of Luton'
     | 'Split Finger Gang'
-    | 'Red Hand'
+    | 'The Red Hand'
     | 'Unknown'
     | 'Wetherbilt Company'
   hold: number
