@@ -151,8 +151,8 @@ p{
 
 .landmarks{
   height: auto;
-  overflow-x: scroll;
-  overflow-y: hidden;
+  overflow-y: scroll;
+  overflow-x: hidden;
   margin: 1rem;
   width: 75%;
   box-shadow: 2px 2px 2px 2px;
@@ -215,8 +215,8 @@ p{
     padding: 1rem;
   }
   .menu-wrapper{
-    overflow: scroll;
-    overflow-y: hidden;
+    overflow-y: scroll;
+    overflow-x: hidden;
     box-shadow: 2px 2px 2px 2px;
     padding: 0;
     margin: 1rem;
