@@ -42,7 +42,7 @@ export const crosswaterInfo: DistrictInfoProps = {
   districtName: 'Crosswater',
   developmentLevel: 'established',
   textContent:
-    "True to its name, this disctrict straddles the Snake. It centers on Murdo's Ferry, which brings miners and their spoils back and forth across the river day and night, usually without losing anyone overboard.",
+    "True to its name, this district straddles the Snake. It centers on Murdo's Ferry, which brings miners and their spoils back and forth across the river day and night, usually without losing anyone overboard.",
   landmarks: [
     {
       name: "Murdo's Ferry",

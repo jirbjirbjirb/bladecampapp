@@ -29,7 +29,6 @@ export function DistrictInfo({
   }, [districtName])
 
   const handleClickOutside = (e: any) => {
-    console.log(e.target.className)
     if (!e?.target.className.includes('modal-link')) {
       setShowModal(false)
     }
