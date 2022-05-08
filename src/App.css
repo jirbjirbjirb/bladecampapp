@@ -55,9 +55,6 @@ body{
   background-repeat: no-repeat;
   background-size: contain;
 }
-.text-log{
-  height: 50%;
-}
 
 .modal{
   display: flex;

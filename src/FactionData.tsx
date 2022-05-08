@@ -36,7 +36,7 @@ export const Unknown: Faction = {
   name: 'Unknown',
   description:
     'There is simply not enough information available to conclude the faction affiliation of this landmark or its denizens, which is not to say there is no affiliation here, or that other factions are not active in this area.',
-  tier: 'unknown',
+  tier: 0,
   hold: 'weak',
 }
 
@@ -44,7 +44,7 @@ export const ProspectorsLeague: Faction = {
   name: "The Prospector's League",
   description:
     "A slim but growing self-consciously organized collection of miners. On occasion a committee of headspeople will negotiate with the freight companies or the Red Hand. It is due to their influence that a large plot of land has been set aside in Hog's Run, where miners with family are beginning to build proper houses.",
-  tier: 'unknown',
+  tier: 1,
   hold: 'weak',
 }
 
@@ -52,6 +52,6 @@ export const ChurchOfTheSkull: Faction = {
   name: 'Unseen Church',
   description:
     'A slim man in a clerical collar walks the length of the street and through the huddled tents, preaching quietly to one group of miners at a time. His gaze is transfixing. The cuffs of his coat are coated in glimmering blue dust, which has been ground irretrievably into the fabric.',
-  tier: 'unknown',
+  tier: 0,
   hold: 'weak',
 }

@@ -61,13 +61,8 @@ function App() {
         setModalData(factionData)
       }
       setShowModal(true)
-      console.log(showModal)
     }
   }
-
-  useEffect(() => {
-    console.log(showModal)
-  }, [showModal])
 
   return (
     <div className="App">
@@ -99,18 +94,20 @@ function App() {
             })}
           </div>
           <div className="menu-wrapper scroll-wrap">
-            <strong>Factions:</strong>
-            {allFactionInfo.map((faction, i) =>
-              faction.name !== 'Unknown' ? (
-                <div
-                  className="faction-names modal-link"
-                  onClick={() => hydrateModal(faction.name)}
-                >
-                  {' '}
-                  <u className="cursor modal-link"> {faction.name} </u>
-                </div>
-              ) : null
-            )}
+            <strong style={{ padding: '0.5rem' }}>Factions:</strong>
+            {allFactionInfo
+              .sort((a, b) => Number(a.tier) + Number(b.tier))
+              .map((faction, i) =>
+                faction.name !== 'Unknown' ? (
+                  <div
+                    className="faction-names modal-link"
+                    onClick={() => hydrateModal(faction.name)}
+                  >
+                    {' '}
+                    <u className="cursor modal-link"> {faction.name} </u>
+                  </div>
+                ) : null
+              )}
           </div>
         </div>
         <div className="main-content">
@@ -125,12 +122,12 @@ function App() {
               hydrateModal={hydrateModal}
             />
           </div>
-          <div
+          {/* <div
             className="map section-bumper"
             style={{
               backgroundImage: `url(${selectedDistrict.districtData.map})`,
             }}
-          ></div>
+          ></div> */}
         </div>
       </div>
     </div>

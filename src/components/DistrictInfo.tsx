@@ -124,7 +124,7 @@ export type Factions = Faction[]
 export type Faction = {
   name: string
   description: string
-  tier: number | 'unknown'
+  tier: number
   hold: 'weak' | 'strong'
 }
 
