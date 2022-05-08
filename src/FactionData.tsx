@@ -40,6 +40,14 @@ export const Unknown: Faction = {
   hold: 'weak',
 }
 
+export const ProspectorsLeague: Faction = {
+  name: "The Prospector's League",
+  description:
+    "A slim but growing self-consciously organized collection of miners. On occasion a committee of headspeople will negotiate with the freight companies or the Red Hand. It is due to their influence that a large plot of land has been set aside in Hog's Run, where miners with family are beginning to build proper houses.",
+  tier: 'unknown',
+  hold: 'weak',
+}
+
 export const ChurchOfTheSkull: Faction = {
   name: 'Unseen Church',
   description:

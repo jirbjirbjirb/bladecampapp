@@ -65,11 +65,12 @@ body{
   height: fit-content;
   width: fit-content;
   max-width: 600px;
-  background-color: #968684;
+  background-color: gray;
   border: black;
   border-width: 4px;
   border-style: solid;
   border-radius: 25px;
+  top: 25px;
 }
 .cursor{
   cursor: pointer;
@@ -83,7 +84,9 @@ body{
   display: flex;
   justify-content: space-between;
 }
-
+.faction-names{
+  padding: 0.5rem;
+}
 
 .faction-name{
   font-weight: 800;

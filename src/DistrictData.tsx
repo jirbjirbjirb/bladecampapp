@@ -1,6 +1,6 @@
-import { DistrictInfoProps } from './components/DistrictInfo'
+import { DistrictKeyInfo } from './components/DistrictInfo'
 
-export const crestHillInfo: DistrictInfoProps = {
+export const crestHillInfo: DistrictKeyInfo = {
   districtName: 'Crest Hill',
   developmentLevel: 'established',
   textContent:
@@ -38,7 +38,7 @@ export const crestHillInfo: DistrictInfoProps = {
   map: './map_cresthill.png',
 }
 
-export const crosswaterInfo: DistrictInfoProps = {
+export const crosswaterInfo: DistrictKeyInfo = {
   districtName: 'Crosswater',
   developmentLevel: 'established',
   textContent:
@@ -76,7 +76,7 @@ export const crosswaterInfo: DistrictInfoProps = {
   map: './map_crosswater.png',
 }
 
-export const silversGulchInfo: DistrictInfoProps = {
+export const silversGulchInfo: DistrictKeyInfo = {
   districtName: "Silver's Gulch",
   developmentLevel: 'established',
   textContent:
@@ -113,7 +113,7 @@ export const silversGulchInfo: DistrictInfoProps = {
   map: './map_silversgulch.png',
 }
 
-export const testDistrict: DistrictInfoProps = {
+export const testDistrict: DistrictKeyInfo = {
   districtName: 'testDistrict',
   developmentLevel: 'established',
   textContent:

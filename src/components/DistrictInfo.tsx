@@ -1,23 +1,15 @@
-import { useEffect, useRef, useState } from 'react'
+import { Dispatch, SetStateAction, useEffect, useRef, useState } from 'react'
 import { useDetectClickOutside } from 'react-detect-click-outside'
-import {
-  Apostles,
-  RedHand,
-  SplitFingers,
-  Unknown,
-  Wetherbilt,
-} from '../FactionData'
-
-const allFactionInfo = [RedHand, Apostles, Unknown, Wetherbilt, SplitFingers]
 
 export function DistrictInfo({
-  districtName,
-  textContent,
-  landmarks,
+  districtData,
+  setShowModal,
+  showModal,
+  modalData,
+  hydrateModal,
 }: DistrictInfoProps) {
   const landmarksRef = useRef<HTMLDivElement>(null)
-  const [showModal, setShowModal] = useState<boolean>(false)
-  const [modalData, setModalData] = useState<Faction>()
+
   const ref = useDetectClickOutside({
     onTriggered: (e) => handleClickOutside(e),
   })
@@ -26,25 +18,11 @@ export function DistrictInfo({
     if (landmarksRef.current) {
       landmarksRef.current.scrollTo(0, 0)
     }
-  }, [districtName])
+  }, [districtData.districtName])
 
   const handleClickOutside = (e: any) => {
     if (!e?.target.className.includes('modal-link')) {
-      setShowModal(false)
-    }
-  }
-
-  const hydrateModal = (affiliation: string) => {
-    const modal = document.querySelector('.modal')
-    if (modal) {
-      const factionData = allFactionInfo.find(
-        (faction) => faction.name.toLowerCase() === affiliation.toLowerCase()
-      )
-      if (factionData) {
-        setModalData(factionData)
-        console.log({ modalData, factionData })
-      }
-      setShowModal(true)
+      if(setShowModal) setShowModal(false)
     }
   }
 
@@ -52,16 +30,16 @@ export function DistrictInfo({
     <div className="text-log-wrapper">
       <div className="district-wrapper">
         <div className="district-name">
-          <h2>{districtName}</h2>
+          <h2>{districtData.districtName}</h2>
         </div>
-        <div className="text-content">{textContent}</div>
+        <div className="text-content">{districtData.textContent}</div>
       </div>
       <div className="landmarks-wrap">
         <div className="landmark-head">
           <u>Landmarks:</u>
         </div>
         <div className="landmarks scroll-wrap" ref={landmarksRef}>
-          {landmarks?.map((landmark, i) => {
+          {districtData.landmarks?.map((landmark, i) => {
             return (
               <div className="landmark-wrapper" key={i}>
                 <div className="landmark-name">
@@ -70,9 +48,10 @@ export function DistrictInfo({
                 <div
                   className="control-text"
                   ref={ref}
-                  onClick={() => hydrateModal(landmark.affiliation)}
+                  onClick={hydrateModal ? () => hydrateModal(landmark.affiliation) : () => null }
                 >
-                  affiliation: <u className="cursor modal-link">{landmark.affiliation}</u>
+                  affiliation:{' '}
+                  <u className="cursor modal-link">{landmark.affiliation}</u>
                 </div>
                 <div>
                   <p>{landmark.textContent}</p>
@@ -93,7 +72,10 @@ export function DistrictInfo({
         <div className="modal-content">
           <div className="modal-toprow">
             <div className="faction-name">{modalData?.name}</div>
-            <div onClick={() => setShowModal(false)} className="cursor">
+            <div
+              onClick={setShowModal ? () => setShowModal(false) : () => null}
+              className="cursor"
+            >
               x
             </div>
           </div>
@@ -109,6 +91,15 @@ export function DistrictInfo({
 }
 
 export type DistrictInfoProps = {
+  districtData: DistrictKeyInfo
+  showModal?: boolean
+  setShowModal?: Dispatch<SetStateAction<boolean>>
+  modalData?: Faction
+  setModalData?: Dispatch<SetStateAction<Faction>>
+  hydrateModal?: (affiliation: string) => void
+}
+
+export type DistrictKeyInfo = {
   districtName: string
   textContent: string
   landmarks?: Landmarks
