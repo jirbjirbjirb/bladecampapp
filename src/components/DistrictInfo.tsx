@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction, useEffect, useRef, useState } from 'react'
+import { Dispatch, SetStateAction, useEffect, useRef } from 'react'
 import { useDetectClickOutside } from 'react-detect-click-outside'
 
 export function DistrictInfo({

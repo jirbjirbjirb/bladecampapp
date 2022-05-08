@@ -1,10 +1,8 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import './App.css'
 import {
   DistrictInfo,
   DistrictInfoProps,
-  DistrictInfos,
-  DistrictKeyInfo,
   Faction,
 } from './components/DistrictInfo'
 import { crosswaterInfo, crestHillInfo, silversGulchInfo } from './DistrictData'
