@@ -142,7 +142,7 @@ export const hogsRun: DistrictKeyInfo = {
       hold: 1,
     },
     {
-      name: "Street of Sayers",
+      name: "Miner's Bazaar",
       textContent:
         "A short alley running perpendicular to the high street and filled with the close smell of incense and burned meat.",
       affiliation: "Unknown",
