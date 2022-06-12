@@ -5,7 +5,7 @@ import {
   DistrictInfoProps,
   Faction,
 } from './components/DistrictInfo'
-import { crosswaterInfo, crestHillInfo, silversGulchInfo } from './DistrictData'
+import { crosswaterInfo, crestHillInfo, silversGulchInfo, hogsRun } from './DistrictData'
 import {
   Apostles,
   ProspectorsLeague,
@@ -24,6 +24,9 @@ const infoPackage: DistrictInfoProps[] = [
   },
   {
     districtData: silversGulchInfo,
+  },
+  {
+    districtData: hogsRun,
   },
 ]
 

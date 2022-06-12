@@ -22,7 +22,7 @@ export function DistrictInfo({
 
   const handleClickOutside = (e: any) => {
     if (!e?.target.className.includes('modal-link')) {
-      if(setShowModal) setShowModal(false)
+      if (setShowModal) setShowModal(false)
     }
   }
 
@@ -48,7 +48,11 @@ export function DistrictInfo({
                 <div
                   className="control-text"
                   ref={ref}
-                  onClick={hydrateModal ? () => hydrateModal(landmark.affiliation) : () => null }
+                  onClick={
+                    hydrateModal
+                      ? () => hydrateModal(landmark.affiliation)
+                      : () => null
+                  }
                 >
                   affiliation:{' '}
                   <u className="cursor modal-link">{landmark.affiliation}</u>
@@ -116,6 +120,7 @@ export type Landmark = {
     | 'The Red Hand'
     | 'Unknown'
     | 'Wetherbilt Company'
+    | "Prospector's League"
   hold: number
 }
 

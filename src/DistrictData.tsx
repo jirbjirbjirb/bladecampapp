@@ -84,7 +84,8 @@ export const silversGulchInfo: DistrictKeyInfo = {
   landmarks: [
     {
       name: 'The Broken Spoke Saloon',
-      textContent: "Eliza Silver's place. The Flagship establishment of the The Red Hand, the Broken Spoke is the tallest building on the street and the oldest one in town. It's bar and a brothel and, for many miners who trade shine for food, booze, and sex, it might as well be a bank.",
+      textContent:
+        "Eliza Silver's place. The Flagship establishment of the The Red Hand, the Broken Spoke is the tallest building on the street and the oldest one in town. It's bar and a brothel and, for many miners who trade shine for food, booze, and sex, it might as well be a bank.",
       affiliation: 'The Red Hand',
       hold: 4,
     },
@@ -113,48 +114,41 @@ export const silversGulchInfo: DistrictKeyInfo = {
   map: './map_silversgulch.png',
 }
 
-export const testDistrict: DistrictKeyInfo = {
-  districtName: 'testDistrict',
+export const hogsRun: DistrictKeyInfo = {
+  districtName: "Hog's Run",
   developmentLevel: 'established',
   textContent:
-    'test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test',
+    "Lying to the east and slightly downhill of Silver's Gulch, Hog's Run is a low and fallow strip of land which retains the smell of its namesakes, who were so recently the sole tenants. It's a bustling place organized around a high street which runs the full length of the distict. It's a place where some of the luckier miners hope to raise respectable homes and be joined by their families, though others view it more as a natural overflow from the madness of Silver's Gulch",
   landmarks: [
     {
-      name: 'TestLandmark',
-      textContent: 'test test test test test test test test',
-      affiliation: 'Unknown',
-      hold: 4,
+      name: "Xander's Square",
+      textContent:
+        "The high street terminates in a public square attended by a variety of food and drink establishments and other amusements. Among the more striking features is a long and low slung building painted in an otherworldly blue. Every time the door swings open a gust of sickly-sweet smoke escapes into the street air.",
+      affiliation: 'Split Finger Gang',
+      hold: 1,
     },
     {
-      name: 'TestLandmark',
-      textContent: 'test test test test test test test test',
-      affiliation: 'Unknown',
-      hold: 4,
+      name: "Meat Market and Stockyard",
+      textContent:
+        "Right down the slope from Boss's Hog's in Silver's Gulch, the meat market has sprung up as a secondary destination where merchants offer a wide variety of beasts, both game and domesticated. Rabbit, deer, and woodchuck are among the most common choices. There is also a fetid open-air agglomeration of pens where livestock are kept in common, though the brand of each beasts hide identifies the animal's owner.",
+      affiliation: "Unknown",
+      hold: 1,
     },
     {
-      name: 'TestLandmark',
-      textContent: 'test test test test test test test test',
-      affiliation: 'Unknown',
-      hold: 4,
+      name: "Prospectors' Hall",
+      textContent:
+        "An open-sided shelter used for a variety of meetings and social gatherings. This is the center of John Bridger's nascent Prospector's League. A string band plays every Saturday and a family atmosphere is strictly enforced",
+      affiliation: "Prospector's League",
+      hold: 1,
     },
     {
-      name: 'TestLandmark',
-      textContent: 'test test test test test test test test',
-      affiliation: 'Unknown',
-      hold: 4,
+      name: "Street of Sayers",
+      textContent:
+        "A short alley running perpendicular to the high street and filled with the close smell of incense and burned meat.",
+      affiliation: "Unknown",
+      hold: 1,
     },
-    {
-      name: 'TestLandmark',
-      textContent: 'test test test test test test test test',
-      affiliation: 'Unknown',
-      hold: 4,
-    },
-    {
-      name: 'TestLandmark',
-      textContent: 'test test test test test test test test',
-      affiliation: 'Unknown',
-      hold: 4,
-    },
+
   ],
   map: './map_silversgulch.png',
 }
