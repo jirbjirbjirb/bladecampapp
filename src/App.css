@@ -1,48 +1,48 @@
-body{
+body {
   background-color: #968684;
 }
 
-.App{
-
+.App {
 }
 /* HOME SHELL */
-.app-container{
+.app-container {
   max-width: 1400px;
   justify-content: center;
   margin: 0 auto;
   height: 100%;
- 
 }
 
-.landmarks-wrap{
+.landmarks-wrap {
   display: flex;
   flex-direction: column;
 }
 
-.app-container, .main-content{
+.app-container,
+.main-content {
   display: flex;
 }
-.main-content{
+.main-content {
   padding: 2rem;
+  padding-top: 3rem;
   width: 75%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.menu-bar{
+.menu-bar {
   width: 25%;
   height: 100%;
   margin-top: 2rem;
   padding-left: 1rem;
 }
-.section-bumper{
+.section-bumper {
   display: flex;
   margin: 0 auto;
   width: 100%;
   height: 100%;
 }
 
-.map{
+.map {
   height: 100%;
   width: 100%;
   background-position: center;
@@ -50,56 +50,61 @@ body{
   background-size: contain;
 }
 
-.modal{
+.modal {
   display: flex;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+}
+.cursor {
+  cursor: pointer;
+}
+
+.modal-content {
   flex-direction: column;
   height: fit-content;
   width: fit-content;
   max-width: 600px;
   background-color: gray;
+  margin: auto;
   border: black;
   border-width: 4px;
   border-style: solid;
   border-radius: 25px;
   top: 25px;
-}
-.cursor{
-  cursor: pointer;
-}
-
-.modal-content{
   padding: 1rem;
+  z-index: 4;
 }
-.modal-toprow{
+.modal-toprow {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-.faction-names{
+.faction-names {
   padding: 0.5rem;
 }
 
-.faction-name{
+.faction-name {
   font-weight: 800;
   font-size: larger;
 }
 
-.faction-other-info{
-  display:flex;
+.faction-other-info {
+  display: flex;
   justify-content: space-between;
   font-weight: 600;
 }
-.faction-description{
+.faction-description {
   padding: 2rem 0;
 }
 
-.menu-wrapper{
+.menu-wrapper {
   display: flex;
   flex-direction: column;
   padding: 1rem;
   padding-left: 0;
 }
-button{
+button {
   cursor: pointer;
   padding: 1rem;
   margin-bottom: 1rem;
@@ -107,96 +112,98 @@ button{
 }
 
 /* TEXT LOG */
-.text-log-wrapper{
+.text-log-wrapper {
   display: flex;
   flex-direction: column;
   height: 100%;
 }
-.district-name, .text-content{
+.district-name,
+.text-content {
   color: black;
   margin: 0 auto;
   width: 100%;
 }
-.district-wrapper{
+.district-wrapper {
   display: flex;
   flex-direction: column;
 }
 
-h1, h2{
+h1,
+h2 {
   margin-top: 0;
   margin-bottom: 0;
   text-align: left;
 }
-p{
+p {
   line-height: 1;
   text-align: left;
 }
 
-.text-content{
+.text-content {
   font-size: small;
   height: auto;
   text-align: left;
   padding-top: 1rem;
 }
 
-.landmarks{
+.landmarks {
   overflow-y: scroll;
   overflow-x: hidden;
   max-height: 30rem;
   box-shadow: 2px 2px 2px 2px;
 }
-.landmark-wrapper{
-  color: black;  
+.landmark-wrapper {
+  color: black;
   display: flex;
   flex-direction: column;
   box-shadow: 2px 2px 2px 2px;
   padding: 1rem;
 }
-.landmark-head{
-  padding-top: 1rem
+.landmark-head {
+  padding-top: 1rem;
 }
-.landmark-name{
+.landmark-name {
   display: flex;
   justify-content: space-between;
 }
-.control-text{
+.control-text {
   text-align: left;
 }
 
-
 @media only screen and (max-width: 600px) {
-  .App{
+  .App {
     height: 100%;
   }
-  .app-container,.text-log-wrapper{
+  .app-container,
+  .text-log-wrapper {
     flex-direction: column;
-    width: 100%
+    width: 100%;
   }
-  .landmark-head{
+  .landmark-head {
     margin-left: 0rem;
     margin-bottom: 1rem;
   }
-  .landmarks-wrap{
+  .landmarks-wrap {
     width: 100%;
   }
-  .main-content{
-    padding:0;
+  .main-content {
+    padding: 0;
     padding-top: 0;
     width: 100%;
   }
-  .menu-bar{
+  .menu-bar {
     width: 100%;
     height: auto;
     margin-top: 2rem;
     padding-left: 0;
   }
-  .menu-bar h1{
+  .menu-bar h1 {
     margin-left: 1rem;
   }
-  .section-bumper{
+  .section-bumper {
     padding: 1rem;
   }
-  .menu-wrapper{
+  .menu-wrapper {
     overflow-y: scroll;
     overflow-x: hidden;
     box-shadow: 2px 2px 2px 2px;
@@ -205,28 +212,27 @@ p{
     width: unset;
     max-height: 20rem;
   }
-  .district-wrapper, .landmarks{
+  .district-wrapper,
+  .landmarks {
     width: 100%;
     margin: 0;
     padding-bottom: 1rem;
     padding-left: 0rem;
   }
-  .map{
+  .map {
     height: unset;
     width: unset;
     min-height: 200px;
     min-width: 200px;
   }
-  .section-bumper{
-    width: unset!important;
+  .section-bumper {
+    width: unset !important;
   }
-  button{
+  button {
     margin: 1rem;
     background-color: gray;
   }
-  .modal{
+  .modal-content {
     max-width: 90%;
   }
-  
 }
-

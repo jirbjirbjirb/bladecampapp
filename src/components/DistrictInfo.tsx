@@ -1,5 +1,4 @@
 import { Dispatch, SetStateAction, useEffect, useRef } from 'react'
-import { useDetectClickOutside } from 'react-detect-click-outside'
 
 export function DistrictInfo({
   districtData,
@@ -7,24 +6,15 @@ export function DistrictInfo({
   showModal,
   modalData,
   hydrateModal,
+  modalRef,
 }: DistrictInfoProps) {
   const landmarksRef = useRef<HTMLDivElement>(null)
-
-  const ref = useDetectClickOutside({
-    onTriggered: (e) => handleClickOutside(e),
-  })
 
   useEffect(() => {
     if (landmarksRef.current) {
       landmarksRef.current.scrollTo(0, 0)
     }
   }, [districtData.districtName])
-
-  const handleClickOutside = (e: any) => {
-    if (!e?.target.className.includes('modal-link')) {
-      if (setShowModal) setShowModal(false)
-    }
-  }
 
   return (
     <div className="text-log-wrapper">
@@ -36,7 +26,7 @@ export function DistrictInfo({
       </div>
       <div className="landmarks-wrap">
         <div className="landmark-head">
-         <h2>Landmarks</h2>
+          <h2>Landmarks</h2>
         </div>
         <div className="landmarks scroll-wrap" ref={landmarksRef}>
           {districtData.landmarks?.map((landmark, i) => {
@@ -47,7 +37,7 @@ export function DistrictInfo({
                 </div>
                 <div
                   className="control-text"
-                  ref={ref}
+                  ref={modalRef}
                   onClick={
                     hydrateModal
                       ? () => hydrateModal(landmark.affiliation)
@@ -65,31 +55,6 @@ export function DistrictInfo({
           })}
         </div>
       </div>
-      <div
-        className="modal"
-        ref={ref}
-        style={{
-          display: showModal ? 'block' : 'none',
-          position: 'absolute',
-        }}
-      >
-        <div className="modal-content">
-          <div className="modal-toprow">
-            <div className="faction-name">{modalData?.name}</div>
-            <div
-              onClick={setShowModal ? () => setShowModal(false) : () => null}
-              className="cursor"
-            >
-              x
-            </div>
-          </div>
-          <div className="faction-description">{modalData?.description}</div>
-          <div className="faction-other-info">
-            <div className="faction-tier">Tier: {modalData?.tier}</div>
-            <div className="faction-hold">Hold: {modalData?.hold}</div>
-          </div>{' '}
-        </div>
-      </div>
     </div>
   )
 }
@@ -101,6 +66,7 @@ export type DistrictInfoProps = {
   modalData?: Faction
   setModalData?: Dispatch<SetStateAction<Faction>>
   hydrateModal?: (affiliation: string) => void
+  modalRef?: React.MutableRefObject<null>
 }
 
 export type DistrictKeyInfo = {

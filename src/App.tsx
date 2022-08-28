@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useDetectClickOutside } from 'react-detect-click-outside'
 import './App.css'
 import {
   DistrictInfo,
@@ -67,16 +68,49 @@ function App() {
       const factionData = allFactionInfo.find(
         (faction) => faction.name.toLowerCase() === affiliation.toLowerCase()
       )
-      console.log({ factionData })
       if (factionData) {
         setModalData(factionData)
       }
       setShowModal(true)
     }
   }
+  const ref = useDetectClickOutside({
+    onTriggered: (e) => handleClickOutside(e),
+  })
+  const handleClickOutside = (e: any) => {
+    if (!e?.target.className.includes('modal-link')) {
+      if (setShowModal) setShowModal(false)
+    }
+  }
 
   return (
     <div className="App">
+      <div
+        className="modal"
+        ref={ref}
+        style={{
+          display: showModal ? 'flex' : 'none',
+          position: 'absolute',
+        }}
+        onClick={() => setShowModal(false)}
+      >
+        <div className="modal-content">
+          <div className="modal-toprow">
+            <div className="faction-name">{modalData?.name}</div>
+            <div
+              onClick={setShowModal ? () => setShowModal(false) : () => null}
+              className="cursor"
+            >
+              x
+            </div>
+          </div>
+          <div className="faction-description">{modalData?.description}</div>
+          <div className="faction-other-info">
+            <div className="faction-tier">Tier: {modalData?.tier}</div>
+            <div className="faction-hold">Hold: {modalData?.hold}</div>
+          </div>{' '}
+        </div>
+      </div>
       <div className="app-container">
         <div className="menu-bar">
           <h1>Districts of Creekside</h1>
@@ -131,6 +165,7 @@ function App() {
               showModal={showModal}
               setShowModal={setShowModal}
               hydrateModal={hydrateModal}
+              modalRef={ref}
             />
           </div>
           {/* <div
