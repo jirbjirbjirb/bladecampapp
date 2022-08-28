@@ -36,7 +36,7 @@ export function DistrictInfo({
       </div>
       <div className="landmarks-wrap">
         <div className="landmark-head">
-          <u>Landmarks:</u>
+         <h2>Landmarks</h2>
         </div>
         <div className="landmarks scroll-wrap" ref={landmarksRef}>
           {districtData.landmarks?.map((landmark, i) => {
@@ -121,7 +121,7 @@ export type Landmark = {
     | 'Unknown'
     | 'Wetherbilt Company'
     | "Prospector's League"
-  hold: number
+    | 'The Flock'
 }
 
 export type Factions = Faction[]

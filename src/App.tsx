@@ -5,9 +5,16 @@ import {
   DistrictInfoProps,
   Faction,
 } from './components/DistrictInfo'
-import { crosswaterInfo, crestHillInfo, silversGulchInfo, hogsRun } from './DistrictData'
+import {
+  crosswaterInfo,
+  crestHillInfo,
+  silversGulchInfo,
+  hogsRun,
+  theGroveInfo,
+} from './DistrictData'
 import {
   Apostles,
+  Flock,
   ProspectorsLeague,
   RedHand,
   SplitFingers,
@@ -28,6 +35,9 @@ const infoPackage: DistrictInfoProps[] = [
   {
     districtData: hogsRun,
   },
+  {
+    districtData: theGroveInfo,
+  },
 ]
 
 const allFactionInfo = [
@@ -37,6 +47,7 @@ const allFactionInfo = [
   Wetherbilt,
   SplitFingers,
   ProspectorsLeague,
+  Flock,
 ]
 
 function App() {
@@ -51,7 +62,6 @@ function App() {
   )!
 
   const hydrateModal = (affiliation: string) => {
-    console.log(`hydrating ${affiliation}`)
     const modal = document.querySelector('.modal')
     if (modal) {
       const factionData = allFactionInfo.find(

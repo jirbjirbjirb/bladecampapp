@@ -22,17 +22,12 @@ body{
 .app-container, .main-content{
   display: flex;
 }
-
 .main-content{
   padding: 2rem;
-  padding-top: 4rem;
   width: 75%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-.scroll-wrap{
-  padding: 1rem;
 }
 .menu-bar{
   width: 25%;
@@ -40,7 +35,6 @@ body{
   margin-top: 2rem;
   padding-left: 1rem;
 }
-
 .section-bumper{
   display: flex;
   margin: 0 auto;
@@ -115,6 +109,7 @@ button{
 /* TEXT LOG */
 .text-log-wrapper{
   display: flex;
+  flex-direction: column;
   height: 100%;
 }
 .district-name, .text-content{
@@ -122,15 +117,9 @@ button{
   margin: 0 auto;
   width: 100%;
 }
-.district-name{
-  font-size: larger;
-  text-align: left;
-}
 .district-wrapper{
   display: flex;
   flex-direction: column;
-  width: 25%;
-  padding: 0rem 1rem 1rem 1rem;
 }
 
 h1, h2{
@@ -147,20 +136,14 @@ p{
   font-size: small;
   height: auto;
   text-align: left;
+  padding-top: 1rem;
 }
 
 .landmarks{
-  height: auto;
   overflow-y: scroll;
   overflow-x: hidden;
-  margin: 1rem;
-  width: 75%;
+  max-height: 30rem;
   box-shadow: 2px 2px 2px 2px;
-  max-height: 600px;
-  padding-left: 1rem;
-}
-.landmarks-wrap{
-  width: 75%;
 }
 .landmark-wrapper{
   color: black;  
@@ -170,8 +153,7 @@ p{
   padding: 1rem;
 }
 .landmark-head{
-  margin-left: 1rem;
-  margin-top: 1rem;
+  padding-top: 1rem
 }
 .landmark-name{
   display: flex;
@@ -221,6 +203,7 @@ p{
     padding: 0;
     margin: 1rem;
     width: unset;
+    max-height: 20rem;
   }
   .district-wrapper, .landmarks{
     width: 100%;
@@ -240,10 +223,6 @@ p{
   button{
     margin: 1rem;
     background-color: gray;
-  }
-  .scroll-wrap{
-    max-height: 200px;
-    padding: 0;
   }
   .modal{
     max-width: 90%;

@@ -27,7 +27,7 @@ export const SplitFingers: Faction = {
 export const Wetherbilt: Faction = {
   name: 'Wetherbilt Company',
   description:
-    "Cyril Wetherbilt is the wealthy scion of a textile dynasty, come to make his name. The bright young man arrived recently with his family and a retinue of hired hands and security, whereupon he immediately began probing claims for possible purchase. His full intentions are unknown but it's clear he intends to buy his way into proven claims.",
+    "Cyril Wetherbilt is the wealthy scion of a textile dynasty, come to make his name, able to call on vast resources and attended by private security, he has played the camp shrewdly, using his connections with a Western Governor to spark panic about the invalidation of mining rights, quietly buying up a huge portion of the camp's proven claims in the aftermath.",
   tier: 2,
   hold: 'strong',
 }
@@ -40,10 +40,16 @@ export const Unknown: Faction = {
   hold: 'weak',
 }
 
+export const Flock: Faction = {
+  name: 'The Flock of The Mountains Bones',
+  description: "A mystifying group of cultists, whose members seem to be suddenly everywhere. The power they derive from the shine appears to be real, and any who enter their temple and behold The Hand can attest to the uniquee psychic effect of its presence.",
+  tier: 0,
+  hold: 'strong',
+}
 export const ProspectorsLeague: Faction = {
   name: "The Prospector's League",
   description:
-    "A slim but growing self-consciously organized collection of miners. On occasion a committee of headspeople will negotiate with the freight companies or the Red Hand. It is due to their influence that a large plot of land has been set aside in Hog's Run, where miners with family are beginning to build proper houses.",
+    "A quickly growing organized collection of miners. On occasion a committee of headspeople will negotiate with the freight companies or the Red Hand. Members are reeling in the wake of the Wetherbilt Deception, and are finding solace in it where they can, though anger among them is deep.",
   tier: 1,
   hold: 'weak',
 }
